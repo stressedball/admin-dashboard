@@ -1,0 +1,208 @@
+:root {
+    --small-icons-max-height : 2em;
+    --big-icons-max-height: 4em;
+    --h4-max-font-size : 1.6em;
+    --h3-max-font-size : 1.8em;
+    --block-padding : 3vh 4vw 3vh 4vw;
+    --header-height : 25vh;
+    --container-height : 75vh;
+    --sidebar-width : 20vw;
+    --right-part-width : 80vw;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#announcements {
+    display: grid;
+    grid-template-rows: calc(0.1 * 0.5 * var(--container-height)) repeat(3, calc(0.33 * 0.5 * var(--container-height)));
+    max-height: calc(0.5 * var(--container-height));
+    /* padding: var(--block-padding); */
+    /* row-gap: 1vh; */
+}
+
+#announcements p {
+    overflow: auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: var(--sidebar-width) var(--right-part-width);
+    font-family: 'Heebo', sans-serif;
+}
+
+#bottomLine {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    align-items: center;    
+}
+
+#bottomLine > img {
+    max-height: var(--big-icons-max-height);
+    width: auto;
+}
+
+button {
+    border-radius: 15px;
+    min-height: 3em;
+    width: 8em;
+    background-color: #1DA1F2;
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin: 0;
+}
+
+button:nth-of-type(1), button:nth-of-type(2) {
+/*    margin-right: 0.2vw;
+*/}
+
+#container {
+    display: grid;
+    grid-template-columns: calc(0.8 * var(--right-part-width)) calc(0.2 * var(--right-part-width));
+    background-color: #D3D3D3;
+}
+
+h3 {
+    font-size: var(--h3-max-font-size);
+}
+
+h4 {
+    font-size: var(--h4-max-font-size);
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: var(--block-padding); */
+    box-shadow: 0 20px black;
+}
+
+input {
+    max-width: 40em;
+    min-height: 2.5em;
+    border-radius: 20px;
+    background-color: #D3D3D3;
+    border: none;
+}
+
+
+#icon img:nth-of-type(1) {
+    width: 80%;
+    height: 80%;
+    /* max-height: var(--big-icons-max-height);
+    width: auto; */
+}
+
+img {
+    width: min(100%, var(--small-icons-max-height));
+    height: auto;
+}
+
+.menu-lines img {
+    justify-self: center;
+}
+
+#project {
+    display: grid;
+    grid-template-rows: calc(0.1 * var(--container-height)) repeat(2, calc(0.45 * var(--container-height)));
+    grid-template-columns: repeat(3, auto);
+    /* padding: var(--block-padding); */
+    /* row-gap: 2vh; */
+}
+
+#project h3 {
+    grid-area: 1/1/1/4;
+}
+
+#project p {
+    max-width: 20vw;
+    max-height: 20vh;
+    overflow: auto;
+}
+
+/* #project p:nth-of-type(5) {
+    grid-area: 3/1/3/1;
+} */
+
+/* #project p:nth-of-type(2) {
+    grid-area: 2/2/2/2;
+} */
+
+/* #project p:nth-of-type(3) {
+    grid-area: 2/3/2/3;
+} */
+
+/* #project p:nth-of-type(4) {
+    grid-area: 3/1/3/1;
+} */
+
+/* #project p:nth-of-type(5) {
+    grid-area: 3/2/3/2;
+} */
+
+#rightPart {
+    display: grid;
+    grid-template-rows: var(--header-height) var(--container-height);  
+}
+
+#sidebar {
+    background-color: #1DA1F2;
+    color: white;
+    display: grid;
+    padding-left: 2vw;
+    grid-template-rows: calc(0.2 * 94vh) repeat(6, calc(0.5 * 94vh)) repeat(3, 0.3 * 94vh);
+    row-gap: 2vh;
+    justify-items: center;
+}
+
+#trending {
+    display: grid;
+    grid-template-rows: repeat(5, calc(0.2 * calc(0.5 * var(--container-height))));
+    max-height: calc(0.5 * var(--container-height));
+}
+
+#trending .tile {
+    font-size: auto;
+    display: flex;
+    /* grid-template-columns: auto auto; */
+    align-items: center;
+}
+
+#topLine {
+    /* padding-top: 3vh; */
+    display: grid; 
+    grid-template-columns: auto 40% auto auto auto;
+    /* align-items: center; */
+}
+
+#topLine img:nth-child(1) {
+    max-height: var(--small-icons-max-height);
+    width: auto;
+}
+
+#topLine img:nth-of-type(2) {
+    max-height: var(--small-icons-max-height);
+    width: auto;
+}
+
+#topLine img:nth-of-type(3) {
+    max-height: var(--small-icons-max-height);
+    width: auto;
+}
+
+#icon, .menu-lines {
+    display: grid;
+    grid-template-columns: calc(0.3 * var(--sidebar-width)) calc(0.7 * var(--sidebar-width));
+    align-items: center;
+}
